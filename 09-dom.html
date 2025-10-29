@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        DOM
+    </title>
+
+</head>
+
+<body>
+    <button id="hello" class="btn1">Hello</button>
+    <button id="world" class="js-btn2">World</button>
+    <script>
+        console.log(document.querySelector('button')
+        .innerHTML='changed');
+        console.log(document.querySelector('.js-btn2')
+        .style.backgroundColor='red');
+
+// console.log(document.querySelector('button').innerHTML='changed');
+// document.querySelector('.js-btn2').style.backgroundColor='red';
+
+// const buttonElement = document.querySelector('.js-btn2');
+// console.log(buttonElement);
+
+        /*console.log(document.title);
+        document.body.innerHTML = '<button>changes</button>'
+        document.body.innerHTML = '<h1>Hello World</h1>';
+        document.title = 'New Title';*/
+    </script>
+
+</body>
+
+</html>

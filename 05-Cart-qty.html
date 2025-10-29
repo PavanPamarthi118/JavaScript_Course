@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart Quantu</title>
+
+</head>
+
+<body>
+
+    <button onclick="showQuantity()">Show Quantity</button>
+    <button onclick="addToCart()">Add to Cart</button>
+    <button onclick="updateCart(2)">+2</button>
+    <button onclick="updateCart(5)">+5</button>
+    <button onclick="resetCart()">Reset cart</button>
+
+    <script>
+        let cartQty = 0;
+        function showQuantity() {
+            console.log("Cart Quantity: " + cartQty);
+        }
+
+        function addToCart() {
+            cartQty++;
+            console.log("Added to cart. Cart Quantity: " + cartQty);
+        }
+
+        function updateCart(quantity) {
+            cartQty += quantity;
+            console.log("Cart Quantity updated: " + cartQty);
+        }
+
+        function resetCart() {
+            cartQty = 0;
+            console.log("Cart reset. Cart Quantity: " + cartQty);
+        }
+
+    </script>
+</body>
+
+</html>
