@@ -1,5 +1,10 @@
 const todoList = [{ name: '', dueDate: '' }];
 
+document.querySelector('.js-add-to-button')
+    .addEventListener('click', () => {
+        addTodo()
+    });
+
 function addTodo() {
     const inputElement = document.querySelector('.js-name-input');
     const name = inputElement.value;
@@ -16,9 +21,10 @@ function addTodo() {
 function renderTodoList() {
 
     let todohtml = '';
-    const todoObject = todoList[i];
-
-    todoList.forEach(function (todoObject, index) {
+    for (let i = 0; i < todoList.length; i++) {
+        const todoObject = todoList[i];
+        // const name = todoObject.name;
+        // const dueDate = todoObject.dueDate;
         const { name, dueDate } = todoObject;
         const html = `
         <div>${name}</div>
@@ -27,9 +33,9 @@ function renderTodoList() {
         Delete
         </button>
         `;
-        todohtml += html;
 
-    });
+        todohtml += html;
+    }
 
     document.querySelector('.js-todo-list').innerHTML = todohtml;
 

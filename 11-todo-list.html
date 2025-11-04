@@ -5,6 +5,7 @@
     <title>
         Todo List
     </title>
+    <link rel="stylesheet" href="styles/11-todo-list.css" />
 
 
 </head>
@@ -12,10 +13,15 @@
 <body>
 
     <p>Todo List</p>
-    <input placeholder="Add a new todo"  class="js-name-input" />
-    <button id="add-todo-button" onclick="addTodo()">Add</button>
+    <div class="todo-input-grid">
+    <input placeholder="Add a new todo" class="js-name-input name-input" />
+    <input type="date" class="js-due-date-input due-date-input" />
+    <button class="add-todo-button" id="add-todo-button" onclick="addTodo()">Add</button>
+    <div class="js-todo-list todo-grid"></div>
+    </div>
 
     <script src="scripts/11-todo-list.js"></script>
+
 
 </body>
 
