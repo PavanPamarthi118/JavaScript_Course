@@ -14,3 +14,14 @@ const deliveryOptions = [{
     priceCents:999
 }];
 export { deliveryOptions };
+
+export function getDeliveryOptions(deliveryOptionsId) {
+    let matchingDeliveryOption;
+
+    deliveryOptions.forEach(option => {
+      if (option.id === deliveryOptionsId) {
+        matchingDeliveryOption = option;
+      }
+    });
+    return matchingDeliveryOption|| deliveryOptions[0];
+}
