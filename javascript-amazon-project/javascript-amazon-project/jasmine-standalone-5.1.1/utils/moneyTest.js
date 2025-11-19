@@ -1,4 +1,4 @@
-import {formatCurrency} from "../scripts/utils/money.js"; 
+import {formatCurrency} from "../../scripts/utils/money.js"; 
 
 describe("formatCurrency", function() {
     it("should format 12345 cents as $123.45", function() {
